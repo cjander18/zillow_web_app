@@ -1,0 +1,43 @@
+<div class ='panel panel-primary'>
+    <div class='panel-heading'>
+        {{pageTitle}}
+    </div>
+
+    <div class='has-error' *ngIf='errorMessage'>{{errorMessage}}</div>
+
+    <div class='table-responsive'>
+        <table class='table' *ngIf='houses && houses.length'>
+            <thead>
+                <tr>
+                    <th>zpid</th>
+                    <th>yearBuilt</th>
+                    <th>lotSizeSqFt</th>
+                    <th>finishedSqlFt</th>
+                    <th>street</th>
+                    <th>zipcode</th>
+                    <th>city</th>
+                    <th>state</th>
+                    <th>latitude</th>
+                    <th>longitude</th>
+                    <th>zestimateAmount</th>
+                    <th>5 Star Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let house of houses'>
+                    <td>{{house.zpid}}</td>
+                    <td>{{house.yearBuilt}}</td>
+                    <td>{{house.lotSizeSqFt}}</td>
+                    <td>{{house.finishedSqlFt}}</td>
+                    <td>{{house.street}}</td>
+                    <td>{{house.zipcode}}</td>
+                    <td>{{house.city}}</td>
+                    <td>{{house.state}}</td>
+                    <td>{{house.latitude}}</td>
+                    <td>{{house.longitude}}</td>
+                    <td>{{house.zestimateAmount}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
